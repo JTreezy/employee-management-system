@@ -1,17 +1,19 @@
+-- create database
 DROP DATABASE IF EXISTS hrtracking_db;
 CREATE DATABASE hrtracking_db;
 
 USE hrtracking_db;
 
+-- creat tables
 CREATE TABLE department (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(30) NOT NULL
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE role (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(30) NOT NULL,
-    salary DECIMAL (6,2) NOT NULL,
+    salary DECIMAL(10,2) NOT NULL,
     department_id INT,
 
     FOREIGN KEY (department_id) REFERENCES department(id) ON DELETE SET NULL
