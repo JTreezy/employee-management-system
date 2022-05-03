@@ -4,7 +4,6 @@ CREATE DATABASE hrtracking_db;
 
 USE hrtracking_db;
 
--- creat tables
 CREATE TABLE department (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(30) NOT NULL
